@@ -6,6 +6,10 @@ Byte serving (or byteserving) is the ability of a web server to provide a range 
 - the server must be able to respond to byte ranges requests;
 - the PDF file must be "optimized", i.e. have a linear structure that would permit the independent download of separate pages or sections (otherwise Acrobat will probably not attempt byte ranges request).
 
+This may be needed for, e.g.:
+- partial file downloading;
+- resuming file downloading.
+
 ## Why byte serving from PHP?
 
 The byte serving of regular PDF files is usually managed by the web server, if it is set up correspondingly. However, one may sometimes need to generate PDF file dynamically from PHP. For example, we would like to restrict access to certain PDF files to users authenticated by PHP, or to serve PDF files generated on the fly from PHP. If we would like our users to benefit of byte serving (view the first page of the file, or other particular pages without downloading the entire file), we must implement byte serving from inside PHP.
