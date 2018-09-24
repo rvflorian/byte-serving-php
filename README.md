@@ -31,4 +31,4 @@ It seems that when a byte ranges request by the Acrobat Reader plugin is not del
 
 I thank to Mathieu Roche and Gaetano Giunta for detecting some bugs in previous versions of the script.
 
-Last updated May 25, 2005; first released July 23, 2004.
+The code was first released online on July 23, 2004 and was last updated May 25, 2005, prior to being migrated to GitHub.
