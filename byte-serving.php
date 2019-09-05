@@ -59,6 +59,20 @@ function buffered_read($file, $bytes, $buffer_size=1024){
 }
 
 function byteserve($filename){
+  // 2019-08-22: added by DannyNiu.
+  // Indicating potentially cacheable results. 
+  $mt = stat($filename)['mtime'];
+  header("Last-Modified: ".date("D, d M Y H:i:s", $mt)." GMT");
+  header("Cache-Control: public, max-age=3600");
+  if( isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ) {
+    $rt = strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']);
+     
+    if( $rt > $mt ) {
+      http_response_code(304);
+      return;
+    }
+  }
+   
   /*
   Byteserves the file $filename.  
 
@@ -77,7 +91,7 @@ function byteserve($filename){
   $ranges=NULL;
   if ($_SERVER['REQUEST_METHOD']=='GET' && isset($_SERVER['HTTP_RANGE']) && $range=stristr(trim($_SERVER['HTTP_RANGE']),'bytes=')){
     $range=substr($range,6);
-    $boundary='g45d64df96bmdf4sdgh45hf5';//set a random boundary
+     $boundary=hash_file('sha256', $filename);//set a random boundary
     $ranges=explode(',',$range);
   }
 
