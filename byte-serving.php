@@ -91,7 +91,7 @@ function byteserve($filename){
   $ranges=NULL;
   if ($_SERVER['REQUEST_METHOD']=='GET' && isset($_SERVER['HTTP_RANGE']) && $range=stristr(trim($_SERVER['HTTP_RANGE']),'bytes=')){
     $range=substr($range,6);
-     $boundary=hash_file('sha256', $filename);//set a random boundary
+     $boundary=bin2hex(random_bytes(32));//hash_file('sha256', $filename);//set a random boundary
     $ranges=explode(',',$range);
   }
 
