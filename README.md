@@ -37,4 +37,4 @@ This byte serving code was first released online on July 23, 2004 and was last u
 
 On Sep. 2019, Razvan V. Florian merged 1 pull request from me (DannyNiu/NJF), 
 
-on Jan. 2020, I decided to develop the script separately from upstream source. 
+On Jan. 2020, I decided to develop the script separately from upstream source. 
