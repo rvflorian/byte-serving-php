@@ -29,7 +29,7 @@ It seems that when a byte ranges request by the Acrobat Reader plugin is not del
 
 ## Acknowledgements
 
-We thank to Mathieu Roche and Gaetano Giunta for detecting some bugs in previous versions of the script, and Razvan V. Florian for providing initial implementation. .
+We thank to Mathieu Roche and Gaetano Giunta for detecting some bugs in previous versions of the script, and Razvan V. Florian for providing initial implementation.
 
 ## History
 
