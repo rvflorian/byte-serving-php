@@ -91,7 +91,7 @@
    // Indicating potentially cacheable results.
    clearstatcache();
    $mt = stat($filename)['mtime'];
-   header("Last-Modified: ".date("D, d M Y H:i:s", $mt)." GMT");
+   header("Last-Modified: ".gmdate("D, d M Y H:i:s", $mt)." GMT");
    header("Cache-Control: public, max-age=3600");
 
    if( isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) )
