@@ -27,14 +27,8 @@ For more details about how byteserving works, you may check the documentation fo
 
 It seems that when a byte ranges request by the Acrobat Reader plugin is not delivered by the server, Acrobat Reader may give a "There was a problem reading this document (109)" error when the user gets to the part of the PDF file that was not delivered. A typical scenario to get this error is to navigate quickly back and forth inside a PDF file while it downloads (by clicking the side navigation bar, for example). This results in many requests being submitted to the server in a short time, and the response to some of them may not reach the Acrobat Reader, due to network latency. However, this is not a bug of this script, but a bug in Acrobat: the same phenomenon also appears with files served directly by the Apache server.
 
-## Acknowledgements
-
-I thank to 
-
 ## History
 
 This byte serving code was first released online on July 23, 2004 and was last updated May 25, 2005, prior to being migrated to GitHub.
 
 Initial code was written by [Răzvan Valentin Florian](https://florian.io/). Mathieu Roche and Gaetano Giunta contributed to detecting some bugs in previous versions of the script. [Danny Niu](https://github.com/dannyniu) is currently maintaining the code and contributing improvements.
-
-
