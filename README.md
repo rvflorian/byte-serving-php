@@ -29,8 +29,12 @@ It seems that when a byte ranges request by the Acrobat Reader plugin is not del
 
 ## Acknowledgements
 
-I thank to Mathieu Roche and Gaetano Giunta for detecting some bugs in previous versions of the script.
+I thank to 
 
 ## History
 
 This byte serving code was first released online on July 23, 2004 and was last updated May 25, 2005, prior to being migrated to GitHub.
+
+Initial code was written by [Răzvan Valentin Florian](https://florian.io/). Mathieu Roche and Gaetano Giunta contributed to detecting some bugs in previous versions of the script. [Danny Niu](https://github.com/dannyniu) is currently maintaining the code and contributing improvements.
+
+
